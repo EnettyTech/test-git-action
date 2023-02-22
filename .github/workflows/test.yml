@@ -39,21 +39,21 @@ jobs:
         run: |
           cat .env
 
-      - name: Create env1 file
-        run: |
-          echo "${{ secrets.CONTENT_ENV }}" > .env1
-          echo "${{ secrets.CONTENT_ENV2 }}" > .env1
-          cat .env1
+      # - name: Create env1 file
+      #   run: |
+      #     echo "${{ secrets.CONTENT_ENV }}" > .env1
+      #     echo "${{ secrets.CONTENT_ENV2 }}" > .env1
+      #     cat .env1
 
-      - name: Create env2 file
-        run: |
-          echo "${{ secrets.CONTENT_ENV2 }}" > .env2
-          cat .env2
+      # - name: Create env2 file
+      #   run: |
+      #     echo "${{ secrets.CONTENT_ENV2 }}" > .env2
+      #     cat .env2
 
-      - name: Change name env
-        run: |
-          cp .env.example .envvv
-          cat .envvv
+      # - name: Change name env
+      #   run: |
+      #     cp .env.example .envvv
+      #     cat .envvv
 
       #  - name: send telegram message on push
       #   uses: appleboy/telegram-action@master
