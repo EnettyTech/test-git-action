@@ -31,7 +31,6 @@ jobs:
 
       - name: Create env1 file
         run: |
-          echo "${{ secrets.CONTENT_ENV }}" > .env1
           cat .env1
 
       - name: Create env2 file
