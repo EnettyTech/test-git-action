@@ -31,6 +31,7 @@ jobs:
 
       - name: Create env1 file
         run: |
+          echo "${{ secrets.CONTENT_ENV }}" > .env1
           cat .env1
 
       - name: Create env2 file
@@ -40,7 +41,7 @@ jobs:
 
       - name: Change name env
         run: |
-          mv .env.example .envvv
+          cp .env.example .envvv
           cat .envvv
 
       #  - name: send telegram message on push
