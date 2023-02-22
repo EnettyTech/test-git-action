@@ -19,7 +19,7 @@
     "eject": "react-scripts eject",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build",
-    "postinstall": "yarn predeploy && yarn deploy"
+    "postinstall": "yarn predeploy"
   },
   "eslintConfig": {
     "extends": [

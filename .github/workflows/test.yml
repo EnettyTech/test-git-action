@@ -51,6 +51,12 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile || { exit 1;}
 
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build
+          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
       - name: Echo env file
         run: |
           cat .env
