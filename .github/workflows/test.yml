@@ -29,6 +29,16 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
 
+      - name: ENVFILE
+      uses: alekangelov/secret-envfile@v1
+      with:
+        content: ${{ secrets.CONTENT_ENV }}
+        filename: .env
+
+      - name: Echo env file
+        run: |
+          cat .env
+
       - name: Create env1 file
         run: |
           echo "${{ secrets.CONTENT_ENV }}" > .env1
