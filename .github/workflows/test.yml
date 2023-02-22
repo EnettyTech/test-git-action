@@ -30,6 +30,14 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
+      - name: Release to GitHub Pages
+        env:
+          USE_SSH: true
+          GIT_USER: git
+        run: |
+          git config --global user.email "huu.tho.ns@gmail.com"
+          git config --global user.name "bachlongkocanh"
+
       # Runs a single command using the runners shell
       - name: Setup yarn
         run: npm install -g yarn
