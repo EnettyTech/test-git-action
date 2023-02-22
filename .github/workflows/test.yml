@@ -30,10 +30,10 @@ jobs:
         run: echo Hello, world!
 
       - name: ENVFILE
-      uses: shine1594/secrets-to-env-action@master
-      with:
-        secrets: ${{ secrets.CONTENT_ENV  }}
-        secrets_env: all
+        uses: alekangelov/secret-envfile@v1
+        with:
+          content: ${{ secrets.CONTENT_ENV }}
+          filename: .env
 
       - name: Echo env file
         run: |
